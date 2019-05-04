@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  username: your_pg_username
+  password: your_pg_password
+  host: localhost
+
+development:
+  <<: *default
+  database: survey_development
+
+test:
+  <<: *default
+  database: survey_test
+
+production:
+  <<: *default
+  database: survey_production
